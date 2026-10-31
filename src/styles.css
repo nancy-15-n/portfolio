@@ -4249,7 +4249,7 @@ body {
   background-color: #f4f0e9;
   background-image:
     linear-gradient(rgb(248 245 239 / 76%), rgb(248 245 239 / 76%)),
-    url("/workspace-background.png");
+    var(--workspace-background-image);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4278,7 +4278,7 @@ body {
   color: var(--text);
   background-image:
     linear-gradient(90deg, rgb(248 245 239 / 5%) 0%, rgb(248 245 239 / 12%) 40%, rgb(248 245 239 / 28%) 100%),
-    url("/workspace-background.png");
+    var(--workspace-background-image);
   background-position: center;
   background-size: cover;
 }
@@ -4477,7 +4477,7 @@ body {
     padding: 66px 22px 52px;
     background-image:
       linear-gradient(rgb(248 245 239 / 58%), rgb(248 245 239 / 58%)),
-      url("/workspace-background.png");
+      var(--workspace-background-image);
     background-position: 30% center;
   }
 
@@ -4743,7 +4743,7 @@ html[data-theme="dark"] body {
   background-color: var(--background);
   background-image:
     linear-gradient(rgb(15 18 31 / 82%), rgb(15 18 31 / 82%)),
-    url("/workspace-background.png");
+    var(--workspace-background-image);
 }
 
 html[data-theme="dark"] .site-header {
@@ -4766,7 +4766,7 @@ html[data-theme="dark"] .hero {
   color: var(--text);
   background-image:
     linear-gradient(90deg, rgb(15 18 31 / 35%) 0%, rgb(15 18 31 / 62%) 42%, rgb(15 18 31 / 82%) 100%),
-    url("/workspace-background.png");
+    var(--workspace-background-image);
 }
 
 html[data-theme="dark"] .hero h1,
