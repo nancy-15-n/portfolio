@@ -4247,7 +4247,7 @@ html {
 
 body {
   background-color: #f8f5ef;
-  background-image: https://th.bing.com/th/id/OIG1.2U5JfdOZtoLJFJ34vF6F?pid=ImgGn
+  background-image:
     linear-gradient(rgb(248 242 232 / 84%), rgb(248 242 232 / 84%)),
     var(--workspace-background-image);
   background-attachment: fixed;
