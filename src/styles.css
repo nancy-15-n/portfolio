@@ -4246,14 +4246,11 @@ html {
 }
 
 body {
-  background-color: #f4f0e9;
+  background-color: #f8f5ef;
   background-image:
-    linear-gradient(rgb(248 245 239 / 76%), rgb(248 245 239 / 76%)),
-    var(--workspace-background-image);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    radial-gradient(ellipse at 12% 8%, rgb(220 207 231 / 24%), transparent 34%),
+    radial-gradient(ellipse at 88% 30%, rgb(228 205 185 / 20%), transparent 37%),
+    linear-gradient(145deg, #f8f5ef, #f0ece5 58%, #f7f1e9);
 }
 
 .site-header {
@@ -4276,11 +4273,7 @@ body {
   min-height: min(570px, calc(100svh - 64px));
   padding: 78px clamp(36px, 8vw, 124px) 64px 35vw;
   color: var(--text);
-  background-image:
-    linear-gradient(90deg, rgb(248 245 239 / 5%) 0%, rgb(248 245 239 / 12%) 40%, rgb(248 245 239 / 28%) 100%),
-    var(--workspace-background-image);
-  background-position: center;
-  background-size: cover;
+  background: transparent;
 }
 
 .hero::before,
@@ -4475,10 +4468,7 @@ body {
     min-height: 540px;
     justify-items: center;
     padding: 66px 22px 52px;
-    background-image:
-      linear-gradient(rgb(248 245 239 / 58%), rgb(248 245 239 / 58%)),
-      var(--workspace-background-image);
-    background-position: 30% center;
+    background: transparent;
   }
 
   .hero-copy {
@@ -4742,8 +4732,8 @@ html[data-theme="dark"] body {
   color: var(--text);
   background-color: var(--background);
   background-image:
-    linear-gradient(rgb(15 18 31 / 82%), rgb(15 18 31 / 82%)),
-    var(--workspace-background-image);
+    radial-gradient(ellipse at 12% 8%, rgb(91 78 117 / 14%), transparent 34%),
+    radial-gradient(ellipse at 88% 30%, rgb(114 76 60 / 12%), transparent 37%);
 }
 
 html[data-theme="dark"] .site-header {
@@ -4764,9 +4754,7 @@ html[data-theme="dark"] .theme-toggle {
 
 html[data-theme="dark"] .hero {
   color: var(--text);
-  background-image:
-    linear-gradient(90deg, rgb(15 18 31 / 35%) 0%, rgb(15 18 31 / 62%) 42%, rgb(15 18 31 / 82%) 100%),
-    var(--workspace-background-image);
+  background: transparent;
 }
 
 html[data-theme="dark"] .hero h1,
