@@ -4248,9 +4248,12 @@ html {
 body {
   background-color: #f8f5ef;
   background-image:
-    radial-gradient(ellipse at 12% 8%, rgb(220 207 231 / 24%), transparent 34%),
-    radial-gradient(ellipse at 88% 30%, rgb(228 205 185 / 20%), transparent 37%),
-    linear-gradient(145deg, #f8f5ef, #f0ece5 58%, #f7f1e9);
+    linear-gradient(rgb(248 245 239 / 62%), rgb(248 245 239 / 62%)),
+    var(--workspace-background-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .site-header {
@@ -4273,7 +4276,11 @@ body {
   min-height: min(570px, calc(100svh - 64px));
   padding: 78px clamp(36px, 8vw, 124px) 64px 35vw;
   color: var(--text);
-  background: transparent;
+  background-image:
+    linear-gradient(90deg, rgb(248 245 239 / 8%), rgb(248 245 239 / 24%)),
+    var(--workspace-background-image);
+  background-position: center;
+  background-size: cover;
 }
 
 .hero::before,
@@ -4468,7 +4475,11 @@ body {
     min-height: 540px;
     justify-items: center;
     padding: 66px 22px 52px;
-    background: transparent;
+    background-image:
+      linear-gradient(rgb(248 245 239 / 48%), rgb(248 245 239 / 48%)),
+      var(--workspace-background-image);
+    background-position: 30% center;
+    background-size: cover;
   }
 
   .hero-copy {
@@ -4732,8 +4743,8 @@ html[data-theme="dark"] body {
   color: var(--text);
   background-color: var(--background);
   background-image:
-    radial-gradient(ellipse at 12% 8%, rgb(91 78 117 / 14%), transparent 34%),
-    radial-gradient(ellipse at 88% 30%, rgb(114 76 60 / 12%), transparent 37%);
+    linear-gradient(rgb(15 18 31 / 80%), rgb(15 18 31 / 80%)),
+    var(--workspace-background-image);
 }
 
 html[data-theme="dark"] .site-header {
@@ -4754,7 +4765,18 @@ html[data-theme="dark"] .theme-toggle {
 
 html[data-theme="dark"] .hero {
   color: var(--text);
-  background: transparent;
+  background-image:
+    linear-gradient(90deg, rgb(15 18 31 / 34%), rgb(15 18 31 / 72%)),
+    var(--workspace-background-image);
+}
+
+@media (max-width: 680px) {
+  html[data-theme="dark"] .hero {
+    background-image:
+      linear-gradient(rgb(15 18 31 / 58%), rgb(15 18 31 / 58%)),
+      var(--workspace-background-image);
+    background-position: 30% center;
+  }
 }
 
 html[data-theme="dark"] .hero h1,
@@ -4840,25 +4862,3 @@ html[data-theme="dark"] .site-footer {
   background: rgb(21 23 32 / 84%);
 }
 
-@media (max-width: 680px) {
-  .closing-inner {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 22px;
-  }
-
-  .contact-copy,
-  .contact-form {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .contact-form {
-    padding: 18px;
-  }
-
-  .theme-toggle {
-    min-height: 40px;
-    padding-inline: 8px;
-    font-size: 11px;
-  }
-}
