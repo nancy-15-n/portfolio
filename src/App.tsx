@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+const contactEmail = "n32562860@gmail.com";
+
 const navigation = [
   ["About", "about"],
   ["Education", "education"],
@@ -187,7 +189,7 @@ function App() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("60@gmail.com");
+      await navigator.clipboard.writeText(contactEmail);
       setCopyStatus("Email copied to clipboard.");
     } catch {
       setCopyStatus("Could not copy automatically. Use the email link instead.");
@@ -202,7 +204,7 @@ function App() {
     const message = String(formData.get("message") ?? "").trim();
     const subject = `Portfolio inquiry from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:60@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setFormStatus("Your email app should open with your message ready to send.");
   };
 
@@ -322,7 +324,7 @@ function App() {
               details that make a product work.
             </p>
             <div className="contact-strip">
-              <a className="profile-button" href="mailto:60@gmail.com">Email Nancy <ArrowIcon /></a>
+              <a className="profile-button" href={`mailto:${contactEmail}`}>Email Nancy <ArrowIcon /></a>
               <ExternalLink href="https://linkedin.com/in/nancy-s-778b59315">
                 <span className="profile-button">LinkedIn <ArrowIcon /></span>
               </ExternalLink>
@@ -508,7 +510,7 @@ function App() {
                   {copyStatus ? "Copied" : "Copy email"}
                   <span aria-hidden="true">{copyStatus ? "✓" : "↗"}</span>
                 </button>
-                <a className="contact-email profile-button" href="mailto:60@gmail.com">Email Nancy <ArrowIcon /></a>
+                <a className="contact-email profile-button" href={`mailto:${contactEmail}`}>Email Nancy <ArrowIcon /></a>
               </div>
               <p className="copy-status" role="status" aria-live="polite">{copyStatus}</p>
               <div className="contact-socials" aria-label="Social profiles">
