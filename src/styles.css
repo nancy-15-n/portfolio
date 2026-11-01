@@ -4246,14 +4246,22 @@ html {
 }
 
 body {
+  isolation: isolate;
   background-color: #f8f5ef;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
   background-image:
-    linear-gradient(rgb(248 242 232 / 84%), rgb(248 242 232 / 84%)),
+    linear-gradient(90deg, rgb(248 242 232 / 20%) 0%, rgb(248 242 232 / 30%) 46%, rgb(248 242 232 / 48%) 100%),
     var(--workspace-background-image);
-  background-attachment: fixed;
-  background-position: right center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  content: "";
+  pointer-events: none;
 }
 
 .site-header {
@@ -4272,7 +4280,7 @@ body {
 
 .hero {
   display: grid;
-  justify-items: end;
+  justify-items: center;
   min-height: min(570px, calc(100svh - 64px));
   padding: 78px clamp(36px, 8vw, 124px) 64px 35vw;
   color: var(--text);
@@ -4321,7 +4329,7 @@ body {
 
 .hero h1 {
   font-size: clamp(62px, 7vw, 88px);
-  line-height: 0.94;
+  line-height: 0.82;
 }
 
 .hero-role {
@@ -4458,8 +4466,8 @@ body {
 }
 
 @media (max-width: 680px) {
-  body {
-    background-position: right center;
+  body::before {
+    background-position: 35% center;
   }
 
   .header-inner,
@@ -4738,8 +4746,11 @@ html[data-theme="dark"] {
 html[data-theme="dark"] body {
   color: var(--text);
   background-color: var(--background);
+}
+
+html[data-theme="dark"] body::before {
   background-image:
-    linear-gradient(rgb(15 18 31 / 84%), rgb(15 18 31 / 84%)),
+    linear-gradient(90deg, rgb(15 18 31 / 48%) 0%, rgb(15 18 31 / 54%) 46%, rgb(15 18 31 / 64%) 100%),
     var(--workspace-background-image);
 }
 
