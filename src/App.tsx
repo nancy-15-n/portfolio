@@ -446,7 +446,7 @@ function App() {
           </div>
           <div className="experience-list">
             <article className="experience-item">
-              <div className="experience-date">JUL 2026 — PRESENT<span>NEW DELHI, INDIA</span></div>
+              <div className="experience-date">JUL 2026 — Pct 2026<span>NEW DELHI, INDIA</span></div>
               <div className="experience-body">
                 <div className="experience-heading"><div><p className="project-overline">INTERNSHIP · DATA SCIENCE &amp; ML</p><h3>Centre for Railway Information Systems <span>(CRIS)</span></h3></div><span className="role-mark">↗</span></div>
                 <p>Building the BRT Analyzer platform for railway bare running time and track simulation. Working across large-scale operational datasets, analytics workflows, and full-stack product development.</p>
